@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+	<head>
+		<title>Kuvera Portfolio Optimizer</title>
+		<link rel = "icon" href="https://bit.ly/2XgpqNT" type = "image/x-icon"> 
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style>
+			body{
+				background: #3392FF;
+				color:white;
+			}
+			.top{
+				width:100%;
+				margin-top:70px;
+				background:white;
+				color:#3392FF;
+			}
+			.top1{
+				width:100%;
+				margin-top:70px;
+				background:white;
+				color:black;
+				height:600px;
+			}
+			.anim{
+				margin-top:180px;
+			}
+			.ex{
+				padding: 20px 30px;
+				line-height:1.6;
+			}
+			.navbar{
+				min-height:50px;
+				background: #3392FF;
+			}
+			.main{
+				width:150px;
+				height: 50%;
+				background-color:transparent;
+				padding-top:0px;
+				padding-bottom:0px;
+			}
+			#myCarousel{
+				margin-top: 70px;
+			}
+			.right{
+				float: right;
+			}
+			.image{
+				width:100%;
+				max-height:500px;
+				min-height:500px;
+			}
+			.explore{
+				font-size:20px;
+				color:white;
+				font-weight: bold;
+				margin: 6px 2px;
+			}
+			.btn{
+				font-size:20px;
+				background:white;
+				color: black;
+				border-radius:100px;
+				margin: 6px 2px;
+				font-weight:bold;
+			}
+			.btn1{
+				font-size:20px;
+				background:#3392FF;
+				color: white;
+				border-radius:100px;
+				margin: 6px 2px;
+				font-weight:bold;
+			}
+			.explore:hover{
+				border-radius:100px;
+			}
+			.btn:hover{
+				background:red;
+				color:black;
+			}
+			.sift{
+				margin-left: 70px;
+			}
+			.box{
+				position:relative;
+				margin-left:35%;
+				padding:6% 12%;
+				color:red;
+			}
+			.box1{
+				position:relative;
+				margin-left:45%;
+				padding:0.8% 3% 4% 12%;
+				color:red;
+			}
+			.box h3{
+				margin-top:200px;
+				font-weight:bold;
+				font-size:40px;
+			}
+			.box h4{
+				font-weight:bold;
+				font-size:30px;
+			}
+			.box1 h3{
+				margin-top:200px;
+				font-weight:bold;
+				font-size:40px;
+			}
+			.box1 h4{
+				font-weight:bold;
+				font-size:30px;
+			}
+
+			.about{
+				color:white;
+				margin-top:40px;
+				margin-bottom:30px;
+			}
+			.about h3{
+				font-weight:bold;
+			}
+			.kiit1{
+				padding:10px 10px;
+				width:140px;
+				float:right;
+			}
+			.roundup{
+				width:50%;
+				border-radius:50%;
+				border: 3px solid white;
+			}
+			.kiit{
+				width:400px;
+				max-height: 260px;
+				margin: 40px 10px;
+				background-color:transparent;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="navbar navbar-light navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<img src="https://bit.ly/38guAQm" class="navbar-brand main" alt="Kuvera"/>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href = {{ url_for('explore') }} class="explore"> Explore</a></li>
+						<li><a href = {{ url_for('welcome') }} class="explore"> Home</a></li>
+						<!--li><a href = "#" class="btn btn-success">Get Started</a></li-->
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<!--div class="top"-->
+		<div class="content">
+		<div class="container top ex">
+		<div class="col-md-6">
+		<center><h2>Market Watch</h2>
+		<!-- TradingView Widget BEGIN -->
+		<div class="tradingview-widget-container">
+			<div class="tradingview-widget-container__widget"></div>
+			<div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/markets/indices/" rel="noopener" target="_blank"><span class="blue-text">Indices</span></a> by TradingView</div>
+			<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+			{
+				"colorTheme": "light",
+				"dateRange": "12M",
+				"showChart": true,
+				"locale": "in",
+				"largeChartUrl": "",
+				"isTransparent": false,
+				"showSymbolLogo": true,
+				"width": "500",
+				"height": "660",
+				"plotLineColorGrowing": "rgba(33, 150, 243, 1)",
+				"plotLineColorFalling": "rgba(33, 150, 243, 1)",
+				"gridLineColor": "rgba(240, 243, 250, 1)",
+				"scaleFontColor": "rgba(120, 123, 134, 1)",
+				"belowLineFillColorGrowing": "rgba(33, 150, 243, 0.12)",
+				"belowLineFillColorFalling": "rgba(33, 150, 243, 0.12)",
+				"symbolActiveColor": "rgba(33, 150, 243, 0.12)",
+				"tabs": 
+				[
+					{
+						"title": "Indices",
+						"symbols": 
+						[
+							{
+								"s": "FOREXCOM:SPXUSD",
+								"d": "S&P 500"
+							},
+							{
+								"s": "FOREXCOM:NSXUSD",
+								"d": "Nasdaq 100"
+							},
+							{
+								"s": "FOREXCOM:DJI",
+								"d": "Dow 30"
+							},
+							{
+								"s": "INDEX:NKY",
+								"d": "Nikkei 225"
+							},
+							{
+								"s": "INDEX:DEU30",
+								"d": "DAX Index"
+							},
+							{
+								"s": "FOREXCOM:UKXGBP",
+								"d": "FTSE 100"
+							}
+						],
+						"originalTitle": "Indices"
+					}
+				]
+			}
+		  </script>
+		</div>
+		<!-- TradingView Widget END -->
+		</center>
+		</div>
+		<div class="col-md-6">
+			<center>
+				<br><br><form class="form-horizontal anim" action={{ url_for('result') }}  method="post">
+                    <div class="form-group">
+						<label class="control-label col-xs-3" for="var_1">TICKER</label>
+						<div class="col-xs-7">
+							<input type="text" class="form-control" name="var_2" placeholder="&nbsp; &nbsp;">
+						</div>
+					</div>
+										<div class="form-group">
+            			<div class="col-xs-offset-3 col-xs-9">
+                			<input type="submit" class="btn btn-success" value="Submit">
+                			<input type="reset" class="btn btn-danger" value="Reset">
+            			</div>
+        			</div>
+				</form>
+			</center>
+			<br><div class="sift"><b>Portfolio with Max Sharpe Ratio: <br>{{pred}}<br>
+			<br>Portfolio with Min Risk: <br>{{pred2}}<br></b></div>
+		</div>
+		</div>	
+		</div>	
+		
+		<div class="container">
+			<div class="col-md-6 about">
+				<h3>Created By: </h3>
+				<h4>Ayan Mukherjee (1805027)</h4>
+				<h4>Ashish Kumar Singh (1805023)</h4>
+				<h4>Gargi Mondal (1805389)</h4>
+				<h4>CSE Department, KIIT University</h4>
+				<h3>Under the Guidance of: </h3>
+				<h4>Dr. Pradeep Kumar Mallick</h4>
+				<h4>Associate Professor II, SCE, KIIT University</h4>
+			</div>
+			<div class="col-md-6">
+				<img src="https://bit.ly/3hW0swY" alt="ayan" class="kiit"/>
+			</div>
+		</div>
+	</body>
+</html>

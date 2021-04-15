@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+	<head>
+		<title>Kuvera Portfolio Optimizer</title>
+		<link rel = "icon" href="https://bit.ly/2XgpqNT" type = "image/x-icon"> 
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link href="minor.css" rel="stylesheet" type="text/css"/>
+		<style>
+			body{
+				background: #3392FF;
+				color:white;
+			}
+			.top{
+				width:100%;
+				margin-top:70px;
+				background:white;
+				color:#3392FF;
+			}
+			.top1{
+				width:100%;
+				margin-top:70px;
+				background:white;
+				color:black;
+				height:600px;
+			}
+			.anim{
+				margin-top:180px;
+			}
+			.ex{
+				padding: 20px 30px;
+				line-height:1.6;
+			}
+			.navbar{
+				min-height:50px;
+				background: #3392FF;
+			}
+			.main{
+				width:150px;
+				height: 50%;
+				background-color:transparent;
+				padding-top:0px;
+				padding-bottom:0px;
+			}
+			#myCarousel{
+				margin-top: 70px;
+			}
+			.right{
+				float: right;
+			}
+			.back{
+				background: url(https://s3.amazonaws.com/public-cdn.ibmec.br/portalibmec-content/public/term/course/banner/cba_financas_sug3_3.jpg) no-repeat;
+				background-color: white;
+				width:100%;
+				max-height:500px;
+				min-height:500px;
+				text-align:center;
+				background-size: 100% 100%;
+			}
+			.back2{
+				background: url(https://www.impulsonegocios.com/wp-content/uploads/2020/12/economia.jpg) no-repeat;
+				background-color: white;
+				width:100%;
+				max-height:500px;
+				min-height:500px;
+				text-align:center;
+				background-size: 100% 100%;
+			}
+			.back3{
+				background: url(https://149452920.v2.pressablecdn.com/wp-content/uploads/2016/07/hero-finance-hub.jpg) no-repeat;
+				background-color: white;
+				width:100%;
+				max-height:500px;
+				min-height:500px;
+				text-align:center;
+				background-size: 100% 100%;
+			}
+			.image{
+				width:100%;
+				max-height:500px;
+				min-height:500px;
+			}
+			.explore{
+				font-size:20px;
+				color:white;
+				font-weight: bold;
+				margin: 6px 2px;
+			}
+			.btn{
+				font-size:20px;
+				background:white;
+				color: black;
+				border-radius:100px;
+				margin: 6px 2px;
+				font-weight:bold;
+			}
+			.btn1{
+				font-size:20px;
+				background:#3392FF;
+				color: white;
+				border-radius:100px;
+				margin: 6px 2px;
+				font-weight:bold;
+			}
+			.explore:hover{
+				border-radius:100px;
+			}
+			.btn:hover{
+				background:red;
+				color:black;
+			}
+
+			.box{
+				position:relative;
+				margin-left:35%;
+				padding:6% 12%;
+				color:red;
+			}
+			.box1{
+				position:relative;
+				margin-left:45%;
+				padding:0.8% 3% 4% 12%;
+				color:red;
+			}
+			.box h3{
+				margin-top:200px;
+				font-weight:bold;
+				font-size:40px;
+			}
+			.box h4{
+				font-weight:bold;
+				font-size:30px;
+			}
+			.box1 h3{
+				margin-top:200px;
+				font-weight:bold;
+				font-size:40px;
+			}
+			.box1 h4{
+				font-weight:bold;
+				font-size:30px;
+			}
+
+			.about{
+				color:white;
+				margin-top:40px;
+				margin-bottom:30px;
+			}
+			.about h3{
+				font-weight:bold;
+			}
+			.kiit1{
+				padding:10px 10px;
+				width:140px;
+				float:right;
+			}
+			.roundup{
+				width:50%;
+				border-radius:50%;
+				border: 3px solid white;
+			}
+			.kiit{
+				width:400px;
+				max-height: 260px;
+				margin: 40px 10px;
+				background-color:transparent;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="navbar navbar-light navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<img src="https://bit.ly/38guAQm" class="navbar-brand main" alt="Kuvera"/>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href = {{ url_for('explore') }} class="explore"> Explore</a></li>
+						<li><a href = {{ url_for('form') }} class="btn btn-success">Get Started</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+				<div class="item active back">
+					<div class="box">
+						<h3>Kuvera</h3>
+						<h4>Make Smart Investments, Maximize Profit & Minimize the Risk...</h4>
+						<a href = {{ url_for('form') }} class="btn btn-success">Get Started</a>
+					</div>
+				</div>
+
+				<div class="item back2">
+					<div class="box1">
+						<h3>Kuvera</h3>
+						<h4><i>Risk hai Tabhi to Ishq hai</i></h4><h4>  Optimise your portfolio using the power of AI & ML</h4>
+						<a href = {{ url_for('form') }} class="btn btn-success">Get Started</a>
+					</div>
+				</div>
+
+				<div class="item back3">
+					<div class="box">
+						<h3>Kuvera</h3>
+						<h4>Portfolio Optimsation tool for retail investors,<i> Bano Smart Investor...</i></h4>
+						<a href = {{ url_for('form') }} class="btn btn-success">Get Started</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Left and right controls -->
+			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#myCarousel" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+		
+		<img src="https://bit.ly/3rYqrbF" alt="KIIT" class="kiit1" />
+		<div class="container about">
+			<h3>Created By: </h3><br>
+			<div class="col-md-3 col-sm-6">
+				<center>
+					<img src="https://bit.ly/399XJvD" alt="Ayan" class="roundup" />
+					<h3>Ayan Mukherjee</h3>
+					<h4>1805027, CSE KIIT</h4>
+				</center>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<center>
+					<img src="https://bit.ly/3hQsFF6" alt="Ashish" class="roundup" />
+					<h3>Ashish Kumar Singh</h3>
+					<h4>1805023, CSE KIIT</h4>
+				</center>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<center>
+					<img src="https://bit.ly/35bE9hB" alt="Gargi" class="roundup" />
+					<h3>Gargi Mondal</h3>
+					<h4>1805389, CSE KIIT</h4>
+				</center>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<center>
+					<img src="data:image/jpeg;base64,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" alt="Pradeep" class="roundup" />
+					<h3>Pradeep Kumar Mallick</h3>
+					<h4>Associate Professor II, SCE, KIIT University</h4>
+				</center>
+			</div>
+		</div>
+	</body>
+</html>

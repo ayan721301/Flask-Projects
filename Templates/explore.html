@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+	<head>
+		<title>Kuvera Portfolio Optimizer</title>
+		<link rel = "icon" href="https://bit.ly/2XgpqNT" type = "image/x-icon"> 
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link href="minor.css" rel="stylesheet" type="text/css"/>
+		<style>
+			body{
+				background: #3392FF;
+				color:white;
+			}
+			.top{
+				width:100%;
+				margin-top:70px;
+				background:white;
+				color:#3392FF;
+			}
+			.top1{
+				width:100%;
+				margin-top:70px;
+				background:white;
+				color:black;
+				height:600px;
+			}
+			.anim{
+				margin-top:180px;
+			}
+			.ex{
+				padding: 20px 30px;
+				line-height:1.6;
+			}
+			.navbar{
+				min-height:50px;
+				background: #3392FF;
+			}
+			.main{
+				width:150px;
+				height: 50%;
+				background-color:transparent;
+				padding-top:0px;
+				padding-bottom:0px;
+			}
+			#myCarousel{
+				margin-top: 70px;
+			}
+			.right{
+				float: right;
+			}
+			.image{
+				width:100%;
+				max-height:500px;
+				min-height:500px;
+			}
+			.explore{
+				font-size:20px;
+				color:white;
+				font-weight: bold;
+				margin: 6px 2px;
+			}
+			.btn{
+				font-size:20px;
+				background:white;
+				color: black;
+				border-radius:100px;
+				margin: 6px 2px;
+				font-weight:bold;
+			}
+			.btn1{
+				font-size:20px;
+				background:#3392FF;
+				color: white;
+				border-radius:100px;
+				margin: 6px 2px;
+				font-weight:bold;
+			}
+			.explore:hover{
+				border-radius:100px;
+			}
+			.btn:hover{
+				background:red;
+				color:black;
+			}
+
+			.box{
+				position:relative;
+				margin-left:35%;
+				padding:6% 12%;
+				color:red;
+			}
+			.box1{
+				position:relative;
+				margin-left:45%;
+				padding:0.8% 3% 4% 12%;
+				color:red;
+			}
+			.box h3{
+				margin-top:200px;
+				font-weight:bold;
+				font-size:40px;
+			}
+			.box h4{
+				font-weight:bold;
+				font-size:30px;
+			}
+			.box1 h3{
+				margin-top:200px;
+				font-weight:bold;
+				font-size:40px;
+			}
+			.box1 h4{
+				font-weight:bold;
+				font-size:30px;
+			}
+
+			.about{
+				color:white;
+				margin-top:40px;
+				margin-bottom:30px;
+			}
+			.about h3{
+				font-weight:bold;
+			}
+			.kiit1{
+				padding:10px 10px;
+				width:140px;
+				float:right;
+			}
+			.roundup{
+				width:50%;
+				border-radius:50%;
+				border: 3px solid white;
+			}
+			.kiit{
+				width:400px;
+				max-height: 260px;
+				margin: 40px 10px;
+				background-color:transparent;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="navbar navbar-light navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<img src="https://bit.ly/38guAQm" class="navbar-brand main" alt="Kuvera"/>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href = {{ url_for('welcome') }} class="explore"> Home</a></li>
+						<li><a href = {{ url_for('form') }} class="btn btn-success">Get Started</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="top1">
+		<div class="container ex">
+			<center><h3><b><i><font color="#3392FF">Profit Dikhta Hai To Koi Bhi Jhukta Hai....</font></i></b></h3></center>
+			<center><h3><b><i><font color="#3392FF"><sup>~Harshad Mehta, 1992</sup></font></i></b></h3></center>
+				<h4>Kuvera is developed as a part of the 6th semester minor project, CSE Department KIIT University by Ayan Mukherjee, Ashish Kumar Singh & Gargi Mondal.</h4>
+				<h4>Kuvera is an ML powered portfolio optimization tool meant for academic purposes for the time being. Kuvera takes into account the Modern portfolio theory and uses Monte Carlo Simulation for Optimizing your portfolio. </h4>
+				<h4>Due to issues with importing historical financial data (as we are kinda broke and cant afford to pay the charges for fetching historical data) we have only used 300 companies out of 2800 companies that are traded in the NYSE.</h4>
+				<h4>Now, The Modern Portfolio Theory is based on the assumption that the nature of investors is that of being risk averse, i.e given 2 portfolios that offer same expected return, an investor shall prefer the one with minimal risk. Thus, an investor is willing to take a higher risk only if the same  is compensated by a higher expected return. Conversely, it can be said that an investor who wants higher expected returns must be willing to except a higher risk. The exact trade-off between Risk and Expected Returns is not same for all investors. Different investors will evaluate the trade-off in differently based on individual risk aversion characteristics. The  implication being a rational investor will not invest in a portfolio if there exists a another portfolio with a more favorable risk-expected return profile. </h4>
+				<h4>For a Given a Portfolio having n number of stocks, with each stock i having weight of wi Kuvera computes the mean and risk (standard deviation) and optimize our portfolio by optimizing the weights wi for the equity instruments using Monte Carlo simulation.</h4>
+			<center><h3><b><font color="#3392FF">Want to know more? Check out our paper on "Portfolio Optimisation for US based Equity Instruments using Monte Carlo Simulations"</font></b></h3>
+			<a href="https://bit.ly/344VS9O" class="btn btn1" target="_blank">Let's Go</a></center>
+		</div>
+		</div>
+		
+		<div class="container">
+			<div class="col-md-6 about">
+				<h3>Created By: </h3>
+				<h4>Ayan Mukherjee (1805027)</h4>
+				<h4>Ashish Kumar Singh (1805023)</h4>
+				<h4>Gargi Mondal (1805389)</h4>
+				<h4>CSE Department, KIIT University</h4>
+				<h3>Under the Guidance of: </h3>
+				<h4>Dr. Pradeep Kumar Mallick</h4>
+				<h4>Associate Professor II, SCE, KIIT University</h4>
+			</div>
+			<div class="col-md-6">
+				<img src="https://bit.ly/3hW0swY" alt="KIIT University" class="kiit" />
+			</div>
+		</div>
+	</body>
+</html>
